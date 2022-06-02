@@ -2,18 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FuncPickupable : MonoBehaviour {
+public class FuncPickupable : MonoBehaviour
+{
 
+    private GameObject theInteractor;
     public float throwForce = 600;
-    Vector3 objectPosotion;
-    float distance;
+    private Vector3 objectPosotion;
+    private float distance;
     public bool canHold = true;
     public GameObject item;
     public bool isHolding = false;
 
     void Update()
     {
-
         if(isHolding)
         {
             GetComponent<Rigidbody>().velocity = Vector3.zero;
